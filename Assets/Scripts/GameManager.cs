@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public int lives = 3;
+
+    public void LoseOneLife()
     {
-        
+        lives-=1;
+        Debug.Log("Lives left: " + lives);
+        if(lives < 0)
+        {
+            EndGame();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void EndGame()
     {
-        
+        Debug.Log("DEATH");
     }
 }

@@ -4,10 +4,12 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 100f; // Set player's movement speed.
     private Rigidbody rb; // Reference to player's Rigidbody.
+    public GameManager gm;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         rb.AddForce(0,0,-speed);
     }
@@ -17,6 +19,7 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("We hit an enemy");
+            gm.LoseOneLife();
             Destroy(gameObject);
         }
        
