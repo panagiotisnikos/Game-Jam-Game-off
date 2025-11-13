@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // Controls player movement and rotation.
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5.0f; // Set player's movement speed.
     private Rigidbody rb; // Reference to player's Rigidbody.
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
         // Rotate player based on horizontal input.
         float moveHorizontal = Input.GetAxis("Horizontal");
-        Vector3 movement = transform.right * moveHorizontal * speed * Time.fixedDeltaTime;
-        rb.MovePosition(rb.position + movement);
+        Vector3 movement2 = transform.right * moveHorizontal * speed * Time.fixedDeltaTime;
+        rb.MovePosition(rb.position + movement2);
     }
 }
