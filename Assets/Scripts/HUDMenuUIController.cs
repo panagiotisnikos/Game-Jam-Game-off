@@ -71,6 +71,15 @@ public class HUDMenuUIController : MonoBehaviour
     {
         if (heartsContainer != null && heartIcon != null)
         {
+            // 1. Clear old heart icons from the scene
+            foreach (Transform child in heartsContainer)
+            {
+                Destroy(child.gameObject);
+            }
+
+            // 2. Clear old references from the list
+            livesState.Clear();
+
             // create 1 heart per life
             for (int life = 0; life < maxLives; life++)
             {
@@ -93,7 +102,7 @@ public class HUDMenuUIController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("HUDMenuController: heartsContainer or heartIcon NOT set");
+            Debug.LogWarning("HUDMenuController: heartsContainer or heartIcon NOT ready");
         }
     }
 }
