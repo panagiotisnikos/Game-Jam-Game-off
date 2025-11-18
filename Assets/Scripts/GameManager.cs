@@ -14,7 +14,12 @@ public class GameManager : MonoBehaviour
     public GameObject livesIcon; // heartIcon prefab
     public Sprite heartFull; // presentation of a full heart
     public Sprite heartEmpty; // presentation of an empty heart
-
+    public float leveltime; //Time required to finish the level
+    bool timeIsRunning; //Checks if timer is still running
+    public EnemyManager enemymanager;
+    public float enemy_interval;    //Time inbetweeen enemy spawns
+    float time_interval;
+    
     private void Start()
     {
         currentLives = maxLives;
@@ -29,6 +34,26 @@ public class GameManager : MonoBehaviour
         // Build and show initial lives
         hudMenuController.BuildHearts(maxLives);
         hudMenuController.UpdateLives(currentLives, maxLives);
+        timeIsRunning=true; 
+    }
+
+        void FixedUpdate()
+    {
+        if (timeIsRunning==true) //Timer runs out
+        {
+            leveltime-=Time.deltaTime;
+            time_interval+=Time.deltaTime;
+            if(time_interval >= enemy_interval)
+            {
+                time_interval=0;
+                enemymanager.SpawnRock();   //Calls method to spawn an enemy
+            }
+            if (leveltime <= 0)
+            {
+                timeIsRunning = false;
+                Debug.Log("You survived!");
+            }
+        }
     }
 
     public void LoseOneLife()
