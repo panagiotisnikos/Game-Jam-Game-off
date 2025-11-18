@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
             {
                 timeIsRunning = false;
                 Debug.Log("You survived!");
+                WinGame();
             }
         }
     }
@@ -72,5 +73,11 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         Debug.Log("DEATH");
+        Time.timeScale = 0f;
+    }
+        private void WinGame()
+    {
+        Debug.Log("DEATH");
+        Time.timeScale = 0f;
     }
 }
