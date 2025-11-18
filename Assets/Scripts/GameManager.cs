@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public int maxLives = 6;
     private int currentLives;
     public HUDMenuUIController hudMenuController; // handles functionality in the UI
-    public TextMeshProUGUI livesText;   // text object used to display lives
+    // public TextMeshProUGUI livesText;   // text object used to display lives
     public float leveltime; //Time required to finish the level
     bool timeIsRunning; //Checks if timer is still running
     public EnemyManager enemymanager;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         // Initialize dependencies with HUD Menu Controller
         // we use methods for encapsulation - we don't directly open the field => fileds private
         // we access them through methods
-        hudMenuController.SetLivesText(livesText);
+        // hudMenuController.SetLivesText(livesText);
 
         // Build and show initial lives
         hudMenuController.BuildHearts(maxLives);

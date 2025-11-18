@@ -33,14 +33,14 @@ public class HUDMenuUIController : MonoBehaviour
     // Method used to update the lives in the UI - presentation lvl
     public void UpdateLives(int currentLives, int maxLives)
     {
-        if (livesText != null)
-        {
-            livesText.text = $"Lives: {currentLives}/{maxLives}";
-        }
-        else
-        {
-            Debug.LogWarning("HUDMenuUIController: livesText is NOT assigned!");
-        }
+        // if (livesText != null)
+        // {
+        //     livesText.text = $"Lives: {currentLives}/{maxLives}";
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("HUDMenuUIController: livesText is NOT assigned!");
+        // }
         if (heartsContainer != null && livesState.Count != 0)
         {
             for (int life = 0; life < livesState.Count; life++)
