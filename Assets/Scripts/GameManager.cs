@@ -10,17 +10,13 @@ public class GameManager : MonoBehaviour
     private int currentLives;
     public HUDMenuUIController hudMenuController; // handles functionality in the UI
     public TextMeshProUGUI livesText;   // text object used to display lives
-    public Transform heartsContainer;
-    public GameObject livesIcon; // heartIcon prefab
-    public Sprite heartFull; // presentation of a full heart
-    public Sprite heartEmpty; // presentation of an empty heart
     public float leveltime; //Time required to finish the level
     bool timeIsRunning; //Checks if timer is still running
     public EnemyManager enemymanager;
     public float enemy_interval;    //Time inbetweeen enemy spawns
     float time_interval;
     public SoundManager soundmanager;
-    
+
     private void Start()
     {
         currentLives = maxLives;
@@ -28,25 +24,22 @@ public class GameManager : MonoBehaviour
         // we use methods for encapsulation - we don't directly open the field => fileds private
         // we access them through methods
         hudMenuController.SetLivesText(livesText);
-        hudMenuController.SetHeartsContainer(heartsContainer);
-        hudMenuController.SetHeartIcon(livesIcon);
-        hudMenuController.SetHeartSprites(heartFull, heartEmpty);
 
         // Build and show initial lives
         hudMenuController.BuildHearts(maxLives);
         hudMenuController.UpdateLives(currentLives, maxLives);
-        timeIsRunning=true; 
+        timeIsRunning = true;
     }
 
-        void FixedUpdate()
+    void FixedUpdate()
     {
-        if (timeIsRunning==true) //Timer runs out
+        if (timeIsRunning == true) //Timer runs out
         {
-            leveltime-=Time.deltaTime;
-            time_interval+=Time.deltaTime;
-            if(time_interval >= enemy_interval)
+            leveltime -= Time.deltaTime;
+            time_interval += Time.deltaTime;
+            if (time_interval >= enemy_interval)
             {
-                time_interval=0;
+                time_interval = 0;
                 enemymanager.SpawnRock();   //Calls method to spawn an enemy
             }
             if (leveltime <= 0)
@@ -65,6 +58,9 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Lives left: " + currentLives + "/" + maxLives);
 
+        // Play animation for hit in life
+        hudMenuController.PlayLoseLifeEffect(currentLives);
+        // update values 
         hudMenuController.UpdateLives(currentLives, maxLives);
 
         if (currentLives <= 0)
@@ -84,7 +80,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         soundmanager.EndMusic();
     }
-        private void WinGame()
+    private void WinGame()
     {
         Debug.Log("DEATH");
         Time.timeScale = 0f;

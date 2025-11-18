@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c6bb4c034687c488b64463cc0662a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HUDMenuUIController
+  heartsContainer: {fileID: 1371368813}
+  heartIcon: {fileID: 6084834754521429705, guid: cfac56e857dcb4f4487ee07d0062244c, type: 3}
 --- !u!114 &23619409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1100,10 +1102,6 @@ MonoBehaviour:
   maxLives: 3
   hudMenuController: {fileID: 23619408}
   livesText: {fileID: 1259290844}
-  heartsContainer: {fileID: 1371368813}
-  livesIcon: {fileID: 6084834754521429705, guid: cfac56e857dcb4f4487ee07d0062244c, type: 3}
-  heartFull: {fileID: 21300000, guid: 98df8cada1ac1bb45a244a7a0436c9e4, type: 3}
-  heartEmpty: {fileID: 21300000, guid: 3f81eeb2b93c2f94e992dfe99f53c079, type: 3}
   leveltime: 60
   enemymanager: {fileID: 727719763}
   enemy_interval: 2
@@ -1583,7 +1581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 510, y: -50}
+  m_AnchoredPosition: {x: 500, y: -40}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371368814
@@ -1887,7 +1885,7 @@ Transform:
   m_GameObject: {fileID: 2027822408}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 2.45, z: 3.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

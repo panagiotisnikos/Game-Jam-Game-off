@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3128871060362722428}
   - component: {fileID: 4441704223563232822}
   - component: {fileID: 4473413641611464995}
+  - component: {fileID: 8216493195386918970}
+  - component: {fileID: 204345938375586307}
   m_Layer: 5
   m_Name: LifeHeartIcon
   m_TagString: Untagged
@@ -75,3 +77,40 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &8216493195386918970
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084834754521429705}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d570f5a1e3dc7124ab4dfbc7ec65b18a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &204345938375586307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6084834754521429705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63287b77761248c48b89db5e11eba0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  heartFull: {fileID: 21300000, guid: 98df8cada1ac1bb45a244a7a0436c9e4, type: 3}
+  heartEmpty: {fileID: 21300000, guid: 3f81eeb2b93c2f94e992dfe99f53c079, type: 3}
+  heartHit: {fileID: 21300000, guid: a580abbb23445a04e94ab6c2be94371b, type: 3}

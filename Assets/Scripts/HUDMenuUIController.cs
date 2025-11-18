@@ -6,11 +6,9 @@ using System.Collections.Generic;
 public class HUDMenuUIController : MonoBehaviour
 {
     private TextMeshProUGUI livesText;   // stays fully private
-    private Transform heartsContainer; // required to know where we will append the hearts
-    private GameObject heartIcon; // the element we want to append on the screen dynamiucally
-    private Sprite heartFull; // presentation of heart when the life is full
-    private Sprite heartEmpty; // presentation when life is lost
-    private List<Image> livesState = new List<Image>();
+    public Transform heartsContainer; // required to know where we will append the hearts
+    public GameObject heartIcon; // the element we want to append on the screen dynamiucally
+    private List<HeartIconController> livesState = new List<HeartIconController>();
 
     // ---------------------------- SETTERS ---------------------------------------
     // for the private fieds, so we can access them from other classes
@@ -22,12 +20,6 @@ public class HUDMenuUIController : MonoBehaviour
     public void SetHeartsContainer(Transform container)
     {
         heartsContainer = container;
-    }
-
-    public void SetHeartSprites(Sprite heartFullIcon, Sprite heartEmptyIcon)
-    {
-        heartFull = heartFullIcon;
-        heartEmpty = heartEmptyIcon;
     }
 
     public void SetHeartIcon(GameObject heartIconPrefab)
@@ -53,12 +45,19 @@ public class HUDMenuUIController : MonoBehaviour
         {
             for (int life = 0; life < livesState.Count; life++)
             {
-                livesState[life].sprite = life < currentLives ? heartFull : heartEmpty;
+                if (life < currentLives)
+                {
+                    livesState[life].SetFull();
+                }
+                else
+                {
+                    livesState[life].SetEmpty();
+                }
             }
         }
         else
         {
-            Debug.LogWarning("HUDMenuUIController: livesText is NOT assigned!");
+            Debug.LogWarning("HUDMenuUIController: heartsContainer or livesState is NOT assigned!");
         }
     }
 
@@ -86,13 +85,12 @@ public class HUDMenuUIController : MonoBehaviour
                 // create a game object inside the heartsContainer
                 // we don't need to set the image - the prefab already knows the image
                 GameObject heartGO = Object.Instantiate(heartIcon, heartsContainer);
-                // get the image from the obj
                 // why ? -> we need to update our code state of lives
-                Image sprite = heartGO.GetComponent<Image>();
-                if (sprite != null)
+                HeartIconController heart = heartGO.GetComponent<HeartIconController>();
+                if (heart != null)
                 {
                     // add it to the list
-                    livesState.Add(sprite);
+                    livesState.Add(heart);
                 }
                 else
                 {
@@ -105,4 +103,14 @@ public class HUDMenuUIController : MonoBehaviour
             Debug.LogWarning("HUDMenuController: heartsContainer or heartIcon NOT ready");
         }
     }
+
+    public void PlayLoseLifeEffect(int lostHeartIndex)
+    {
+        if (lostHeartIndex < 0 || lostHeartIndex >= livesState.Count)
+        {
+            return;
+        }
+        livesState[lostHeartIndex].PlayHit();
+    }
+
 }
