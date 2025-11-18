@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public EnemyManager enemymanager;
     public float enemy_interval;    //Time inbetweeen enemy spawns
     float time_interval;
+    public SoundManager soundmanager;
     
     private void Start()
     {
@@ -67,13 +68,21 @@ public class GameManager : MonoBehaviour
         hudMenuController.UpdateLives(currentLives, maxLives);
 
         if (currentLives <= 0)
+        {
+            soundmanager.BottleBreak();
             EndGame();
+        }
+        else
+        {
+            soundmanager.BottleHit();
+        }
     }
 
     private void EndGame()
     {
         Debug.Log("DEATH");
         Time.timeScale = 0f;
+        soundmanager.EndMusic();
     }
         private void WinGame()
     {
