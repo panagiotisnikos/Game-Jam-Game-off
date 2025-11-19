@@ -86,4 +86,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("DEATH");
         Time.timeScale = 0f;
     }
+    public int GetCurrentLives()
+    {
+        return currentLives;
+    }
 }
