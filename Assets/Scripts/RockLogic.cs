@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 100f; // Set player's movement speed.
+    public float speed = 200f; // Set player's movement speed.
     private Rigidbody rb; // Reference to player's Rigidbody.
     public GameManager gm;
 
@@ -22,16 +22,23 @@ public class Enemy : MonoBehaviour
             gm.LoseOneLife();
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("OutOfBounds"))
+
+        {
+            Debug.Log("Enemy left");
+            Destroy(gameObject);
+        }
        
     }
-    void OnTriggerExit(Collider other)
+    /*void OnTriggerExit(Collider other)
     {
             if (other.CompareTag("Wall"))
         {
             Debug.Log("Enemy left");
             Destroy(gameObject);
         }
-    }
+    }*/
 
 
     // Update is called once per frame

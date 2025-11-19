@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
             {
                 time_interval = 0;
                 enemymanager.SpawnRock();   //Calls method to spawn an enemy
+                enemymanager.shark_spawn(); // Testing the shark enemy
             }
             if (leveltime <= 0)
             {
