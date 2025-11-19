@@ -832,9 +832,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 84a33a6de29c49647b82071c82f5e8bb, type: 3}
+  m_Resource: {fileID: 8300000, guid: e4db2df3b9338f84f8fda0d9418be95b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.491
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1321,6 +1321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
   rock_prefab: {fileID: 3207772655896045974, guid: 434bf97ec0e817b45b42963d3723685e, type: 3}
   shark_prefab: {fileID: 4932212809466751325, guid: f105d60f45ef6a04fb4a0d0bef491777, type: 3}
+  soundmanager: {fileID: 727719764}
 --- !u!114 &727719764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,6 +1338,9 @@ MonoBehaviour:
   ambience: {fileID: 160155679}
   break_sound: {fileID: 8300000, guid: 610fed664b1abd540a1f6b946258a87b, type: 3}
   hit_sound: {fileID: 8300000, guid: 7fca086797bbee345908abac76975be3, type: 3}
+  rockhit_sound: {fileID: 8300000, guid: 3d4c4882597a12949abe9f119bc4f7d1, type: 3}
+  shark_sound: {fileID: 8300000, guid: 1656ee45a22993044aa093f4c65833e4, type: 3}
+  sharkhit_sound: {fileID: 8300000, guid: 77344635a87520246bc98c95a4ee13d4, type: 3}
 --- !u!1001 &737998320
 PrefabInstance:
   m_ObjectHideFlags: 0

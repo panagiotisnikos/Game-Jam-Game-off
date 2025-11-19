@@ -5,11 +5,13 @@ public class SharkLogic : MonoBehaviour
     public float speed = 700f; // shark movement speed.
     private Rigidbody rb; // Reference to player's Rigidbody.
     public GameManager gm;
+    public SoundManager soundmanager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        soundmanager = GameObject.Find("GameManager").GetComponent<SoundManager>();
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         rb.AddForce(speed, 0, 0);
     }
@@ -20,6 +22,7 @@ public class SharkLogic : MonoBehaviour
         {
             Debug.Log("Shark: Collision with Player");
             gm.LoseOneLife();
+            soundmanager.HitShark();    //Plays sound of shark bitting
             Destroy(gameObject);
         }
 
@@ -32,7 +35,7 @@ public class SharkLogic : MonoBehaviour
     }
 
 
-    // ¨Κ: Το έκανα comment out - Μήπως χρειαστεί
+    // οΏ½οΏ½: οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½ comment out - οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½
     /*void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Wall"))

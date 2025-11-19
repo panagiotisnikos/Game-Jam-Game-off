@@ -5,11 +5,13 @@ public class Enemy : MonoBehaviour
     public float speed = 200f; // Set player's movement speed.
     private Rigidbody rb; // Reference to player's Rigidbody.
     public GameManager gm;
+    public SoundManager soundmanager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        soundmanager = GameObject.Find("GameManager").GetComponent<SoundManager>();
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
         rb.AddForce(0,0,-speed);
     }
@@ -20,6 +22,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("We hit an enemy");
             gm.LoseOneLife();
+            soundmanager.HitRock(); //Plays sound of hitting rock
             Destroy(gameObject);
         }
 

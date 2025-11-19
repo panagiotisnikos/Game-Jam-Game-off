@@ -4,6 +4,8 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject rock_prefab;    //Selects Prefab to spawn
     public GameObject shark_prefab;
+    public SoundManager soundmanager;
+
   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,6 +34,7 @@ public class EnemyManager : MonoBehaviour
         rot.Set(0.1882f, 0.6605f, 0.1991f, 0.6989f);
         rot.Set(0, 0, 0.216439605f, 0.976296067f);
         Instantiate(shark_prefab, spawn_position, rot);
+        soundmanager.SharkSound();  //Plays sound of sharking entering the field
     }
 
 }
