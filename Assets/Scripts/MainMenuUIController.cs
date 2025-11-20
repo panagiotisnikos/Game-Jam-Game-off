@@ -3,9 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUIController : MonoBehaviour
 {
+
+    public LevelLoaderController lvlLoader;
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        // start the function - but because coroutine, we initialize with StartCoroutine() function
+        StartCoroutine(lvlLoader.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void QuitGame()
