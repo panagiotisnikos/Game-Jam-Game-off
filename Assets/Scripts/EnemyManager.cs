@@ -29,11 +29,15 @@ public class EnemyManager : MonoBehaviour
 
     public void shark_spawn()
     {
-        Vector3 spawn_position = new Vector3(-10, 0, Random.Range(-10.0f, -3.0f));
-        Quaternion rot = new Quaternion();
-        rot.Set(0.1882f, 0.6605f, 0.1991f, 0.6989f);
-        rot.Set(0, 0, 0.216439605f, 0.976296067f);
-        Instantiate(shark_prefab, spawn_position, rot);
+        // τυχαία επιλογή 50/50 για το αν θα κάνει
+        // spawn ο καρχαρίας δεξιά(1) ή αριστερά(-1)
+        int random_side = -13;
+        if (Random.value > 0.5f)
+        {
+            random_side = 13;
+        }
+            Vector3 spawn_position = new Vector3(random_side, 0, Random.Range(-6, 5));
+        Instantiate(shark_prefab, spawn_position, Quaternion.identity);
         soundmanager.SharkSound();  //Plays sound of sharking entering the field
     }
 
