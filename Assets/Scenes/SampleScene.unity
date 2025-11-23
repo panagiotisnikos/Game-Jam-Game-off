@@ -1547,6 +1547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
   rock_prefab: {fileID: 3207772655896045974, guid: 434bf97ec0e817b45b42963d3723685e, type: 3}
   shark_prefab: {fileID: 4932212809466751325, guid: f105d60f45ef6a04fb4a0d0bef491777, type: 3}
+  seaweed_prefab: {fileID: 9085323997353090640, guid: ee11f092c5325ff4fa26b4e5e69d2417, type: 3}
   soundmanager: {fileID: 727719764}
 --- !u!114 &727719764
 MonoBehaviour:
@@ -1758,7 +1759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe4aa25fbaa8c847bf303efbb081879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 3
+  speed_normal: 5
+  speed_debuff: 3
 --- !u!136 &870580240
 CapsuleCollider:
   m_ObjectHideFlags: 0

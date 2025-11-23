@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - PlayerBanner
   - OutOfBounds
+  - Seaweed
   layers:
   - Default
   - TransparentFX

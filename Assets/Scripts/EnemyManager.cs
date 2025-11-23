@@ -4,6 +4,7 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject rock_prefab;    //Selects Prefab to spawn
     public GameObject shark_prefab;
+    public GameObject seaweed_prefab;
     public SoundManager soundmanager;
 
   
@@ -41,4 +42,9 @@ public class EnemyManager : MonoBehaviour
         soundmanager.SharkSound();  //Plays sound of sharking entering the field
     }
 
+    public void seaweed_spawn()
+    {
+        Vector3 spawn_position = new Vector3(Random.Range(-8.0f, 8.0f), 0, 12);
+        Instantiate(seaweed_prefab, spawn_position, Quaternion.identity);
+    }
 }

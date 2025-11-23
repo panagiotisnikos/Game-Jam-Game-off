@@ -5,7 +5,9 @@ using UnityEngine.Apple;
 
 public class SharkLogic : MonoBehaviour
 {
-    public float speed = 10f; // shark movement speed.
+    private float speed = 10f;
+    public float speed_normal = 10f; // shark movement speed
+    public float speed_debuff = 6f;
     private Rigidbody rb; // Reference to player's Rigidbody.
     public GameManager gm;
     public SoundManager soundmanager;
@@ -25,7 +27,7 @@ public class SharkLogic : MonoBehaviour
         /*
         rb.AddForce(speed, 0, 0);
         */
-
+        speed = speed_normal;
         originalRotation = transform.localRotation;
     }
 
@@ -51,6 +53,18 @@ public class SharkLogic : MonoBehaviour
             soundmanager.HitShark();
         }
 
+        if (other.CompareTag("Seaweed"))
+        {
+            speed = speed_debuff;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Seaweed"))
+        {
+            speed = speed_normal;
+        }
     }
 
 
