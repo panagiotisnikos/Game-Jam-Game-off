@@ -43,11 +43,11 @@ public class SoundManager : MonoBehaviour
     }
        public void HitShark()
     {
-        ambience.PlayOneShot(sharkhit_sound,1.5f);
+        ambience.PlayOneShot(sharkhit_sound,1.2f);
     }
 
     public void SharkSound()
     {
-        ambience.PlayOneShot(shark_sound,0.5f);
+        ambience.PlayOneShot(shark_sound,0.8f);
     }
 }
