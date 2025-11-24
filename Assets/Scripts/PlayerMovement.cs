@@ -7,12 +7,13 @@ public class PlayerMovement : MonoBehaviour
     public float speed_normal = 5.0f; // Set player's movement speed
     public float speed_debuff = 3.0f; // entered seaweed area debuff
     private Rigidbody rb; // Reference to player's Rigidbody.
+    public SoundManager soundmanager;
 
     // Start is called before the first frame update
     private void Start()
     {
         rb = GetComponent<Rigidbody>(); // Access player's Rigidbody.
-        speed = speed_normal; // Αρχικοποίηση τιμής ταχύτητας
+        speed = speed_normal; // οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½
     }
 
     // Update is called once per frame
@@ -48,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Seaweed"))
         { 
             speed = speed_debuff;
+            soundmanager.SeaweedSoundOn();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -55,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Seaweed"))
         {
             speed = speed_normal;
+            soundmanager.SeaweedSoundOff();
         }
     }
 }

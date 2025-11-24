@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip rockhit_sound;
     public AudioClip shark_sound;
     public AudioClip sharkhit_sound;
+    public GameObject seaweed_audiosource_prefab;
+
+    private bool inside_seaweed = false;
+    private GameObject temp;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -49,5 +54,23 @@ public class SoundManager : MonoBehaviour
     public void SharkSound()
     {
         ambience.PlayOneShot(shark_sound,0.8f);
+    }
+
+        public void SeaweedSoundOn()
+    {
+        if (inside_seaweed == false)
+        {
+            temp = Instantiate(seaweed_audiosource_prefab);
+            inside_seaweed = true;
+        }
+    }
+
+            public void SeaweedSoundOff()
+    {
+        if (inside_seaweed == true)
+        {
+           Destroy(temp);  
+           inside_seaweed = false;
+        }
     }
 }
