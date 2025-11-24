@@ -4,7 +4,8 @@ public class EnemyManager : MonoBehaviour
 {
     public GameObject rock_prefab;    //Selects Prefab to spawn
     public GameObject shark_prefab;
-    public GameObject seaweed_prefab;
+    public GameObject seaweed_prefab_1;
+    public GameObject seaweed_prefab_2;
     public SoundManager soundmanager;
 
   
@@ -30,8 +31,8 @@ public class EnemyManager : MonoBehaviour
 
     public void shark_spawn()
     {
-        // ôõ÷áßá åðéëïãÞ 50/50 ãéá ôï áí èá êÜíåé
-        // spawn ï êáñ÷áñßáò äåîéÜ(1) Þ áñéóôåñÜ(-1)
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 50/50 ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+        // spawn ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½(1) ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(-1)
         int random_side = -13;
         if (Random.value > 0.5f)
         {
@@ -45,6 +46,13 @@ public class EnemyManager : MonoBehaviour
     public void seaweed_spawn()
     {
         Vector3 spawn_position = new Vector3(Random.Range(-8.0f, 8.0f), 0, 12);
-        Instantiate(seaweed_prefab, spawn_position, Quaternion.identity);
+        if (Random.value > 0.5f)
+        {
+            Instantiate(seaweed_prefab_1, spawn_position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(seaweed_prefab_2, spawn_position, Quaternion.identity);
+        }
     }
 }
