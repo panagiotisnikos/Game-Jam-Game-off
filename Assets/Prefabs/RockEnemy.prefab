@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -752184394088848486}
   m_Layer: 0
   m_Name: RockEnemy
-  m_TagString: Enemy
+  m_TagString: Shark
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   speed: 200
   gm: {fileID: 0}
+  soundmanager: {fileID: 0}
 --- !u!1001 &2512659874886942341
 PrefabInstance:
   m_ObjectHideFlags: 0

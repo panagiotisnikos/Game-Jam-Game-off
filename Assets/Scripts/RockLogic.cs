@@ -26,11 +26,12 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
+    /*
         if (other.CompareTag("Enemy"))
         {
             Destroy(gameObject);
             soundmanager.HitRock();
-        }
+        }*/
 
         if (other.CompareTag("OutOfBounds"))
         {

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3432378217679292747}
   - component: {fileID: 9164593908081959249}
   - component: {fileID: 9163561343003236832}
+  - component: {fileID: 4728792666333077693}
   m_Layer: 0
   m_Name: SeaweedArea2
   m_TagString: Seaweed
@@ -70,6 +71,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SeaweedLogic
   seaweed_speed: 2
+--- !u!54 &4728792666333077693
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2541245230420239922}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &6043408164966385940
 PrefabInstance:
   m_ObjectHideFlags: 0

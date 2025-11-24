@@ -47,7 +47,12 @@ public class SharkLogic : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Rock"))
+        {
+            Destroy(gameObject);
+            soundmanager.HitShark();
+        }
+        if (other.CompareTag("Shark"))
         {
             Destroy(gameObject);
             soundmanager.HitShark();

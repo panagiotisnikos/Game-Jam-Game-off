@@ -9,6 +9,8 @@ TagManager:
   - PlayerBanner
   - OutOfBounds
   - Seaweed
+  - Shark
+  - Rock
   layers:
   - Default
   - TransparentFX
