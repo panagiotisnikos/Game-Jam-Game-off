@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     private int currentLives;
     public HUDMenuUIController hudMenuController; // handles functionality in the UI
     // public TextMeshProUGUI livesText;   // text object used to display lives
+    public GameObject victoryCanvas;
     public float leveltime; //Time required to finish the level
     bool timeIsRunning; //Checks if timer is still running
     public EnemyManager enemymanager;
@@ -20,6 +21,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         currentLives = maxLives;
+        if (victoryCanvas != null)
+        {
+            victoryCanvas.SetActive(false);
+        }
         // Initialize dependencies with HUD Menu Controller
         // we use methods for encapsulation - we don't directly open the field => fileds private
         // we access them through methods
@@ -84,8 +89,13 @@ public class GameManager : MonoBehaviour
     }
     private void WinGame()
     {
-        Debug.Log("DEATH");
+        Debug.Log("VICTORY");
         Time.timeScale = 0f;
+
+        if (victoryCanvas != null)
+        {
+            victoryCanvas.SetActive(true);
+        }
     }
     public int GetCurrentLives()
     {
