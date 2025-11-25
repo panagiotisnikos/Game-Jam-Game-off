@@ -4,20 +4,17 @@ public class GameOverController : MonoBehaviour
 {
 
     public LevelLoaderController lvlLoader;
-    public SoundManagerMainMenu soundmanager;
     private float quittimer = 0;
     private bool timer = false;
 
     public void RetryGame()
     {
-        soundmanager.ButtonPressed1();
         // start the function - but because coroutine, we initialize with StartCoroutine() function
         StartCoroutine(lvlLoader.LoadLevel(1));
     }
 
     public void QuitGame()
     {
-        soundmanager.ButtonPressed2();
         timer = true;
     }
 
