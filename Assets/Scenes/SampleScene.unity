@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_text: You've reached the island ! A new letter is waiting for you...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
-  m_sharedMaterial: {fileID: 3757764383246359932, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
+  m_sharedMaterial: {fileID: 1845928472417380179, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1883,7 +1883,7 @@ MonoBehaviour:
   m_text: Read the letter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
-  m_sharedMaterial: {fileID: 3757764383246359932, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
+  m_sharedMaterial: {fileID: 1845928472417380179, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7675,14 +7675,14 @@ RectTransform:
   m_GameObject: {fileID: 1371368812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 23619412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 650, y: -110}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 278, y: 1708}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371368814
@@ -8585,7 +8585,7 @@ RectTransform:
   m_GameObject: {fileID: 2010464896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 494922663}
@@ -8593,7 +8593,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -80}
+  m_AnchoredPosition: {x: 100, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010464899
