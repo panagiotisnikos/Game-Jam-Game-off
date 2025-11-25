@@ -5,7 +5,8 @@ using System.Collections.Generic;
 
 public class HUDMenuUIController : MonoBehaviour
 {
-    private TextMeshProUGUI livesText;   // stays fully private
+    public TextMeshProUGUI lvlStart_text;
+    public TextMeshProUGUI lvlEnd_text;
     public Transform heartsContainer; // required to know where we will append the hearts
     public GameObject heartIcon; // the element we want to append on the screen dynamiucally
     public Transform navigation;
@@ -13,9 +14,14 @@ public class HUDMenuUIController : MonoBehaviour
 
     // ---------------------------- SETTERS ---------------------------------------
     // for the private fieds, so we can access them from other classes
-    public void SetLivesText(TextMeshProUGUI text)
+    public void SetLvlStartText(string text)
     {
-        livesText = text;
+        Debug.Log(text);
+        lvlStart_text.text = text;
+    }
+    public void SetLvlEndText(string text)
+    {
+        lvlEnd_text.text = text;
     }
 
     public void SetHeartsContainer(Transform container)

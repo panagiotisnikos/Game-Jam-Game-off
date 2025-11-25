@@ -151,8 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c6bb4c034687c488b64463cc0662a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HUDMenuUIController
+  lvlStart_text: {fileID: 871937637}
+  lvlEnd_text: {fileID: 1567399134}
   heartsContainer: {fileID: 1371368813}
   heartIcon: {fileID: 6084834754521429705, guid: cfac56e857dcb4f4487ee07d0062244c, type: 3}
+  navigation: {fileID: 2057775133}
 --- !u!114 &23619409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,7 +2682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lvl 1
+  m_text: Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
   m_sharedMaterial: {fileID: 1845928472417380179, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
@@ -8243,7 +8246,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lvl 2
+  m_text: Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
   m_sharedMaterial: {fileID: 1845928472417380179, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}

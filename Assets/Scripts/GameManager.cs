@@ -2,12 +2,14 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     // Fields presented in the Inspector
     public int maxLives = 6;
     private int currentLives;
+    private int sceneIndex = 1;
     public HUDMenuUIController hudMenuController; // handles functionality in the UI
     // public TextMeshProUGUI livesText;   // text object used to display lives
     public GameObject victoryCanvas;
@@ -28,7 +30,9 @@ public class GameManager : MonoBehaviour
         // Initialize dependencies with HUD Menu Controller
         // we use methods for encapsulation - we don't directly open the field => fileds private
         // we access them through methods
-        // hudMenuController.SetLivesText(livesText);
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        hudMenuController.SetLvlStartText("Lvl " + sceneIndex);
+        hudMenuController.SetLvlEndText("Lvl " + (sceneIndex + 1));
 
         // Build and show initial lives
         hudMenuController.BuildHearts(maxLives);
