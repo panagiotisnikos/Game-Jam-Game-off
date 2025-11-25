@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         soundmanager.EndMusic();
         Debug.Log("Calling LoadLevel NOW!");
-        StartCoroutine(lvlLoader.LoadLevel("GameOver"));
+        lvlLoader.LoadLevel("GameOver");
     }
     private void WinGame()
     {

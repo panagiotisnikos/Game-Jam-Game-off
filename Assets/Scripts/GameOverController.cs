@@ -9,8 +9,7 @@ public class GameOverController : MonoBehaviour
 
     public void RetryGame()
     {
-        // start the function - but because coroutine, we initialize with StartCoroutine() function
-        StartCoroutine(lvlLoader.LoadLevel(1));
+        lvlLoader.LoadLevel(1);
     }
 
     public void QuitGame()
