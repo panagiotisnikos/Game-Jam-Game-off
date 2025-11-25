@@ -324,13 +324,13 @@ MonoBehaviour:
   m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
-  m_sharedMaterial: {fileID: 3757764383246359932, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
+  m_sharedMaterial: {fileID: 1845928472417380179, guid: 2817b210ad5f9bc4e9f6d529156d31d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279433444
+    rgba: 4294967295
   m_fontColor: {r: 0, g: 0.10980393, b: 0.16470589, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
