@@ -9,8 +9,22 @@ public class HUDMenuUIController : MonoBehaviour
     public TextMeshProUGUI lvlEnd_text;
     public Transform heartsContainer; // required to know where we will append the hearts
     public GameObject heartIcon; // the element we want to append on the screen dynamiucally
-    public Transform navigation;
+    public RectTransform navigation;
+    public RectTransform startIsland;
+    public RectTransform endIsland;
+    private Vector2 navStart;
+    private Vector2 navEnd;
     private List<HeartIconController> livesState = new List<HeartIconController>();
+
+    public void Start()
+    {
+        navStart.x = startIsland.anchoredPosition.x;
+        navStart.y = navigation.anchoredPosition.y;
+        navEnd.x = endIsland.anchoredPosition.x;
+        navEnd.y = navigation.anchoredPosition.y;
+        navigation.anchoredPosition = navStart;
+
+    }
 
     // ---------------------------- SETTERS ---------------------------------------
     // for the private fieds, so we can access them from other classes
@@ -33,6 +47,9 @@ public class HUDMenuUIController : MonoBehaviour
     {
         heartIcon = heartIconPrefab;
     }
+
+    // ----------------------- GETTERS -------------------------------
+
 
 
     //--------------------- BUILDING / UPDATES HEARTS -----------------------------------
@@ -120,8 +137,12 @@ public class HUDMenuUIController : MonoBehaviour
         livesState[lostHeartIndex].PlayHit();
     }
 
-    public void NavigationMovement(float offset)
+
+    // ------------------------ NAVIGATION ---------------------------------------
+    public void NavigationMovement(float normalizedPosition)
     {
-        navigation.position = new Vector3(navigation.position.x + offset, navigation.position.y, navigation.position.z);
+        // Debug.Log(normalizedPosition);
+        normalizedPosition = Mathf.Clamp01(normalizedPosition);
+        navigation.anchoredPosition = Vector2.Lerp(navStart, navEnd, normalizedPosition);
     }
 }

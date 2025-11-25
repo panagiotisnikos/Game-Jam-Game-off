@@ -6,13 +6,13 @@ public class TrackDistance : MonoBehaviour
     public GameManager gameManager; // Σύρε εδώ τον GameManager από τη σκηνή
 
     [Header("Settings")]
-    public float forwardSpeed = 10.0f; 
+    public float forwardSpeed = 10.0f;
 
     [Header("Info (Read Only)")]
     [SerializeField] private float currentDistance = 0f;
     [SerializeField] private float maxDistance = 0f; // Πού είναι το νησί;
-    
-    private float startingTime; 
+
+    private float startingTime;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class TrackDistance : MonoBehaviour
         if (gameManager != null)
         {
             startingTime = gameManager.leveltime;
-            
+
             maxDistance = startingTime * forwardSpeed;
         }
         else
@@ -43,7 +43,7 @@ public class TrackDistance : MonoBehaviour
             currentDistance = Mathf.Clamp(currentDistance, 0, maxDistance);
 
             // debug
-            Debug.Log("Distance: " + (int)currentDistance + "m / " + (int)maxDistance + "m");
+            // Debug.Log("Distance: " + (int)currentDistance + "m / " + (int)maxDistance + "m");
         }
     }
 
@@ -51,10 +51,10 @@ public class TrackDistance : MonoBehaviour
     {
         return currentDistance;
     }
-    
+
     public float GetMaxDistance()
     {
         return maxDistance;
     }
-    
+
 }

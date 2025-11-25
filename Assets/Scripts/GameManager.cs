@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
     public int maxLives = 6;
     private int currentLives;
     private int sceneIndex = 1;
+    private TrackDistance trackDistance;
+    public LevelLoaderController lvlLoader;
     public HUDMenuUIController hudMenuController; // handles functionality in the UI
-    // public TextMeshProUGUI livesText;   // text object used to display lives
     public GameObject victoryCanvas;
     public float leveltime; //Time required to finish the level
     bool timeIsRunning; //Checks if timer is still running
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         currentLives = maxLives;
+        trackDistance = GetComponent<TrackDistance>();
         if (victoryCanvas != null)
         {
             victoryCanvas.SetActive(false);
@@ -46,7 +48,10 @@ public class GameManager : MonoBehaviour
         {
             leveltime -= Time.deltaTime;
             time_interval += Time.deltaTime;
-            hudMenuController.NavigationMovement(Time.deltaTime * 4);
+            // distance requires normalization because the sprite doesn't have the same distance or mesurment with the actual distance in gameplay
+            float normalized = Mathf.Clamp01(trackDistance.GetDistance() / trackDistance.GetMaxDistance());
+            hudMenuController.NavigationMovement(normalized);
+
             if (time_interval >= enemy_interval)
             {
                 time_interval = 0;
@@ -68,7 +73,7 @@ public class GameManager : MonoBehaviour
         currentLives -= 1;
         if (currentLives < 0) currentLives = 0;
 
-        Debug.Log("Lives left: " + currentLives + "/" + maxLives);
+        // Debug.Log("Lives left: " + currentLives + "/" + maxLives);
 
         // Play animation for hit in life
         hudMenuController.PlayLoseLifeEffect(currentLives);
@@ -91,6 +96,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("DEATH");
         Time.timeScale = 0f;
         soundmanager.EndMusic();
+        Debug.Log("Calling LoadLevel NOW!");
+        StartCoroutine(lvlLoader.LoadLevel("GameOver"));
     }
     private void WinGame()
     {

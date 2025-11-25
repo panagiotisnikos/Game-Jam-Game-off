@@ -11,6 +11,7 @@ public class LevelLoaderController : MonoBehaviour
     // Coroutine
     public IEnumerator LoadLevel(int levelIndex)
     {
+        Debug.Log("LoadLevel INT called: " + levelIndex);
         // Play aniamtion
         transition.SetTrigger("Start");
 
@@ -19,6 +20,19 @@ public class LevelLoaderController : MonoBehaviour
 
         //Load scene
         SceneManager.LoadSceneAsync(levelIndex);
+    }
+
+    public IEnumerator LoadLevel(string levelName)
+    {
+        Debug.Log("LoadLevel STRING called: " + levelName);
+        // Play aniamtion
+        transition.SetTrigger("Start");
+
+        //Wait
+        yield return new WaitForSeconds(transitionTime);
+
+        //Load scene
+        SceneManager.LoadSceneAsync(levelName);
     }
 
 }

@@ -156,6 +156,8 @@ MonoBehaviour:
   heartsContainer: {fileID: 1371368813}
   heartIcon: {fileID: 6084834754521429705, guid: cfac56e857dcb4f4487ee07d0062244c, type: 3}
   navigation: {fileID: 2057775133}
+  startIsland: {fileID: 1125435103}
+  endIsland: {fileID: 1086714114}
 --- !u!114 &23619409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2133,6 +2135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   maxLives: 3
+  lvlLoader: {fileID: 1890190632}
   hudMenuController: {fileID: 23619408}
   victoryCanvas: {fileID: 814599171}
   leveltime: 60
@@ -8428,9 +8431,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 352682929}
-  - {fileID: 2057775133}
   - {fileID: 1125435103}
   - {fileID: 1086714114}
+  - {fileID: 2057775133}
   m_Father: {fileID: 23619412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8893,6 +8896,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860366194}
   m_CullTransparentMesh: 1
+--- !u!114 &1890190632 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1749742079154348919, guid: 9ecfae2017677d74283e6528d3daaf3e, type: 3}
+  m_PrefabInstance: {fileID: 1680171594}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18553fe89d5d712449bc22c93480f997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1957997200
 PrefabInstance:
   m_ObjectHideFlags: 0
