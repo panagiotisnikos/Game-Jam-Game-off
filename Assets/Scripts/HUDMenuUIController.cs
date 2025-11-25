@@ -8,6 +8,7 @@ public class HUDMenuUIController : MonoBehaviour
     private TextMeshProUGUI livesText;   // stays fully private
     public Transform heartsContainer; // required to know where we will append the hearts
     public GameObject heartIcon; // the element we want to append on the screen dynamiucally
+    public Transform navigation;
     private List<HeartIconController> livesState = new List<HeartIconController>();
 
     // ---------------------------- SETTERS ---------------------------------------
@@ -113,4 +114,8 @@ public class HUDMenuUIController : MonoBehaviour
         livesState[lostHeartIndex].PlayHit();
     }
 
+    public void NavigationMovement(float offset)
+    {
+        navigation.position = new Vector3(navigation.position.x + offset, navigation.position.y, navigation.position.z);
+    }
 }

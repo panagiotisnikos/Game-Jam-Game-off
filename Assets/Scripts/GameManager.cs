@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         {
             leveltime -= Time.deltaTime;
             time_interval += Time.deltaTime;
+            hudMenuController.NavigationMovement(Time.deltaTime * 4);
             if (time_interval >= enemy_interval)
             {
                 time_interval = 0;
