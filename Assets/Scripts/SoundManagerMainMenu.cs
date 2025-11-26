@@ -13,11 +13,11 @@ public class SoundManagerMainMenu : MonoBehaviour
 
  public void ButtonPressed1()
     {
-        main_menu.PlayOneShot(Button1);
+        main_menu.PlayOneShot(Button1,0.7f);
     }
 
  public void ButtonPressed2()
     {
-        main_menu.PlayOneShot(Button2);
+        main_menu.PlayOneShot(Button2,0.7f);
     }
 }

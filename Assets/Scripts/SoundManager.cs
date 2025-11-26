@@ -4,12 +4,15 @@ using UnityEngine.Audio;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource music;
+    public AudioSource music2;
     public AudioSource ambience;
     public AudioClip break_sound;
     public AudioClip hit_sound;
     public AudioClip rockhit_sound;
     public AudioClip shark_sound;
     public AudioClip sharkhit_sound;
+    public AudioClip letter_sound;
+    public AudioClip win_sound;
     public GameObject seaweed_audiosource_prefab;
 
     private bool inside_seaweed = false;
@@ -72,5 +75,18 @@ public class SoundManager : MonoBehaviour
            Destroy(temp);  
            inside_seaweed = false;
         }
+    }
+
+    public void WinSound()
+    {
+        ambience.PlayOneShot(win_sound,0.6f);
+    }
+        public void LetterSound()
+    {
+        ambience.PlayOneShot(letter_sound,0.7f);
+    }
+        public void LetterMusic()
+    {
+        music2.Play();
     }
 }

@@ -103,6 +103,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("VICTORY");
         Time.timeScale = 0f;
+        soundmanager.music.Stop();
+        soundmanager.ambience.Stop();
+        soundmanager.WinSound();
+
 
         if (victoryCanvas != null)
         {
