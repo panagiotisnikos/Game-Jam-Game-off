@@ -83,6 +83,7 @@ public class SoundManager : MonoBehaviour
     }
         public void LetterSound()
     {
+        SeaweedSoundOff();
         ambience.PlayOneShot(letter_sound,0.7f);
     }
         public void LetterMusic()
