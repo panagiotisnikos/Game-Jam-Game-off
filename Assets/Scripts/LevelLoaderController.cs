@@ -22,12 +22,16 @@ public class LevelLoaderController : MonoBehaviour
     // Coroutine
     public IEnumerator LoadLevelRoutine(int levelIndex)
     {
-        Debug.Log("LoadLevel INT called: " + levelIndex);
+        // Debug.Log("LoadLevel INT called: " + levelIndex);
         // Play aniamtion
         transition.SetTrigger("Start");
 
         //Wait
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSecondsRealtime(transitionTime + 1);
+
+
+        // Reset time for next scene
+        Time.timeScale = transitionTime;
 
         //Load scene
         SceneManager.LoadSceneAsync(levelIndex);
@@ -35,15 +39,16 @@ public class LevelLoaderController : MonoBehaviour
 
     public IEnumerator LoadLevelRoutine(string levelName)
     {
-        Debug.Log("LoadLevel STRING called: " + levelName);
+        // Debug.Log("LoadLevel STRING called: " + levelName);
         // Play aniamtion
         transition.SetTrigger("Start");
 
         //Wait
-        yield return new WaitForSecondsRealtime(transitionTime);
+        yield return new WaitForSecondsRealtime(transitionTime + 1);
+
 
         // Reset time for next scene
-        Time.timeScale = 1f;
+        Time.timeScale = transitionTime;
 
         //Load scene
         SceneManager.LoadSceneAsync(levelName);
