@@ -1023,6 +1023,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4471455426260397394, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_text
+      value: 'Living only with the presence of my thoughts has become difficult...
+
+        I
+        turned away from friends and family in pursuit of greater glories.
+
+        I
+        wanted to change life, to make something great, to make a dent in the unyielding
+        armor of society.
+
+        Something more than my life''s worth.
+
+        Something
+        that the future generations would thank me of.
+
+        But alas, now I know,
+        I was a fool to tempt the powers of fate.
+
+        I''ve steered my crew
+        in danger''s way like the selfish being I swore to not become...
+
+        All
+        in the name of vanity.
+
+        Now I stand, a lone survivor on a barren
+        island.
+
+        None shall know my story.
+
+        None shall know my life''s
+        work.
+
+        None shall know my fate.
+
+        Everything was for nothing...'
+      objectReference: {fileID: 0}
     - target: {fileID: 4735071173433516673, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 14.915
@@ -1359,7 +1396,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: e4db2df3b9338f84f8fda0d9418be95b, type: 3}
+  m_Resource: {fileID: 8300000, guid: a538cc7f791a3fb4da3ffb36eed79895, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.491
   m_Pitch: 1
@@ -2195,7 +2232,7 @@ MonoBehaviour:
   lvlLoader: {fileID: 2127633921}
   hudMenuController: {fileID: 2092441652}
   victoryCanvas: {fileID: 88613046}
-  leveltime: 60
+  leveltime: 20
   enemymanager: {fileID: 727719763}
   enemy_interval: 2
   soundmanager: {fileID: 727719764}

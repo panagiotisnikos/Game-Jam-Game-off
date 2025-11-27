@@ -1023,6 +1023,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4471455426260397394, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_text
+      value: 'While I''m stuck here I can''t help but wonder;
+
+        Is a person''s
+        fate bound by chance?
+
+        Don''t we have a saying in the grand scheme
+        of life?
+
+        Is it destined for me to die alone on this island, or will
+        another soul come to my aid?
+
+
+        Maybe it was my mistake that I let
+        life pass me by,
+
+        but I can still send these messages and hope they
+        reach another shore...
+
+
+        I have to try... I have to believe help
+        will come eventually...
+
+        I won''t let go of living.
+
+        I simply
+        can''t...
+
+        I put these letters inside this bottle and let the waves
+        carry it.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4735071173433516673, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 14.915
@@ -1359,7 +1391,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: e4db2df3b9338f84f8fda0d9418be95b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 328cc529881974d478b6bdb43a302151, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.491
   m_Pitch: 1
