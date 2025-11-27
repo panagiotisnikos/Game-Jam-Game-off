@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     public float enemy_interval;    //Time inbetweeen enemy spawns
     float time_interval;
     public SoundManager soundmanager;
+    public GameObject islandPrefab;
+
 
     private void Start()
     {
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
         hudMenuController.BuildHearts(maxLives);
         hudMenuController.UpdateLives(currentLives, maxLives);
         timeIsRunning = true;
+
+        islandSpawn();
     }
 
     void FixedUpdate()
@@ -116,5 +120,11 @@ public class GameManager : MonoBehaviour
     public int GetCurrentLives()
     {
         return currentLives;
+    }
+    private void islandSpawn()
+    {
+        
+        Vector3 island_spawn = new Vector3(0f, 0f, -17f);
+        Instantiate(islandPrefab, island_spawn, Quaternion.identity);
     }
 }

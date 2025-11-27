@@ -2195,6 +2195,8 @@ MonoBehaviour:
   enemymanager: {fileID: 727719763}
   enemy_interval: 2
   soundmanager: {fileID: 727719764}
+  islandPrefab: {fileID: 2914663151313903352, guid: a87596689f876e94c8cbf8a1a09a2546, type: 3}
+  islandAnimationSpeed: 3
 --- !u!4 &727719762
 Transform:
   m_ObjectHideFlags: 0
