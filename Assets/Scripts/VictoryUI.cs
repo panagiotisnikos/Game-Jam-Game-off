@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Χρειάζεται για να καλέσεις το SceneManager και να αλλάξεις σκηνή...
 
 public class VictoryUI : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class VictoryUI : MonoBehaviour
     public GameObject readLetterPanel;
     public GameObject backgroundOverlay;
     public SoundManager soundmanager;
+    public LevelLoaderController lvlLoader;
 
     public void OpenLetter()
     {
@@ -21,5 +23,7 @@ public class VictoryUI : MonoBehaviour
         readLetterPanel.SetActive(false);
         notificationPanel.SetActive(false);
         backgroundOverlay.SetActive(false);
+
+        lvlLoader.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

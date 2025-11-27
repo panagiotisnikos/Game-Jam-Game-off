@@ -1044,6 +1044,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 7331076761148805193, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: lvlLoader
+      value: 
+      objectReference: {fileID: 2127633921}
+    - target: {fileID: 7331076761148805193, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: soundmanager
       value: 
       objectReference: {fileID: 727719764}
