@@ -26,6 +26,11 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
 
+         if (other.CompareTag("Shark"))
+        {
+            soundmanager.HitRock();
+        }
+
     /*
         if (other.CompareTag("Enemy"))
         {
