@@ -6,7 +6,7 @@ public class SeaweedLogic : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -15,13 +15,13 @@ public class SeaweedLogic : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, chosen_destination, speed * Time.deltaTime);
         transform.position -= new Vector3(0, 0, seaweed_speed * Time.deltaTime);
     }
-void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("###########################################################################");
-        Debug.Log("###########################################################################");
-        Debug.Log("###########################################################################");
-        
+        // Debug.Log("###########################################################################");
+        // Debug.Log("###########################################################################");
+        // Debug.Log("###########################################################################");
+
         if (other.CompareTag("OutOfBounds"))
         {
             Destroy(gameObject);

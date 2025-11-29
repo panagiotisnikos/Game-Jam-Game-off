@@ -36,7 +36,16 @@ public class GameManager : MonoBehaviour
         // we access them through methods
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
         hudMenuController.SetLvlStartText("Lvl " + sceneIndex);
-        hudMenuController.SetLvlEndText("Lvl " + (sceneIndex + 1));
+        // -1: scenes - mainMenu
+        int numberOfScenes = SceneManager.sceneCountInBuildSettings - 1;
+        if (sceneIndex + 1 == numberOfScenes)
+        {
+            hudMenuController.SetLvlEndText("The End");
+        }
+        else
+        {
+            hudMenuController.SetLvlEndText("Lvl " + (sceneIndex + 1));
+        }
 
         // Build and show initial lives
         hudMenuController.BuildHearts(maxLives);
@@ -100,7 +109,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("DEATH");
         Time.timeScale = 0f;
         soundmanager.EndMusic();
-        Debug.Log("Calling LoadLevel NOW!");
+        // Debug.Log("Calling LoadLevel NOW!");
         lvlLoader.LoadLevel("GameOver");
     }
     private void WinGame()
@@ -123,7 +132,7 @@ public class GameManager : MonoBehaviour
     }
     private void islandSpawn()
     {
-        
+
         Vector3 island_spawn = new Vector3(0f, 0f, -17f);
         Instantiate(islandPrefab, island_spawn, Quaternion.identity);
     }
