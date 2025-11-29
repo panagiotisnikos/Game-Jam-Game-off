@@ -20,6 +20,12 @@ public class GameOverController : MonoBehaviour
         timer = true;
     }
 
+    public void MainMenu()
+    {
+        soundmanager.ButtonPressed1();
+        lvlLoader.LoadLevel(0);
+    }
+
     public void FixedUpdate()
     {
         if (timer == true)

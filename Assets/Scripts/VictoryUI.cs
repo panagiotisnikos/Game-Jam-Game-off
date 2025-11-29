@@ -6,6 +6,7 @@ public class VictoryUI : MonoBehaviour
     public GameObject notificationPanel;
     public GameObject readLetterPanel;
     public GameObject backgroundOverlay;
+    public GameObject victoryPanel;
     public SoundManager soundmanager;
     public LevelLoaderController lvlLoader;
 
@@ -23,7 +24,17 @@ public class VictoryUI : MonoBehaviour
         readLetterPanel.SetActive(false);
         notificationPanel.SetActive(false);
         backgroundOverlay.SetActive(false);
+        // -2: scenes - mainMenu - gameOver
+        int numberOfScenes = SceneManager.sceneCountInBuildSettings - 2;
+        if (numberOfScenes == SceneManager.GetActiveScene().buildIndex)
+        {
+            victoryPanel.SetActive(true);
+        }
+        else
+        {
+            lvlLoader.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        }
 
-        lvlLoader.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 }
