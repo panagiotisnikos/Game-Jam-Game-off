@@ -919,9 +919,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2027822409}
     m_Modifications:
+    - target: {fileID: 182297247269210273, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 182297247269210273, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.8247044
+      objectReference: {fileID: 0}
+    - target: {fileID: 182297247269210273, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 899655903175825403, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_Name
       value: victoryCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099352523485994094, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_text
+      value: 'You''ve reached the 3rd island ! A new letter is waiting for you
+
+        ...'
       objectReference: {fileID: 0}
     - target: {fileID: 1099352523485994094, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_fontSize
@@ -1023,6 +1041,64 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2659178549666115669, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659178549666115669, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659178549666115669, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3927313888169428688, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_text
+      value: 'While I''m stuck here I can''t help but wonder;
+
+        Is a person''s
+        fate bound by chance?
+
+        Don''t we have a saying in the grand scheme
+        of life?
+
+        Is it destined for me to die alone on this island, or
+        will another soul come to my aid?
+
+        
+
+        Maybe it was my mistake
+        that I let life pass me by,
+
+        but I can still send these messages
+        and hope they reach another shore...
+
+        
+
+        I have to try...
+        I have to believe help will come eventually...
+
+        I won''t let go
+        of living.
+
+        I simply can''t...
+
+        I put these letters inside
+        this bottle and let the waves carry it.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986391344864574913, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 93.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986391344864574913, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -77.18384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344191011380383548, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4471455426260397394, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_text
       value: 'While I''m stuck here I can''t help but wonder;
@@ -1066,6 +1142,10 @@ PrefabInstance:
     - target: {fileID: 6507199775192124955, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 13.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6572508799344569831, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6837578566357383298, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_fontAsset

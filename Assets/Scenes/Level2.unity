@@ -919,9 +919,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2027822409}
     m_Modifications:
+    - target: {fileID: 182297247269210273, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 182297247269210273, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.79082054
+      objectReference: {fileID: 0}
+    - target: {fileID: 182297247269210273, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 899655903175825403, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_Name
       value: victoryCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099352523485994094, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_text
+      value: 'You''ve reached the 2nd island ! A new letter is waiting for you
+
+        ...'
       objectReference: {fileID: 0}
     - target: {fileID: 1099352523485994094, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_fontSize
@@ -1021,6 +1039,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1339174182483949546, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659178549666115669, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659178549666115669, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659178549666115669, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3927313888169428688, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_text
+      value: 'Living only with the presence of my thoughts has become difficult...
+
+        I
+        turned away from friends and family in pursuit of greater glories.
+
+        I
+        wanted to change life, to make something great, to make a dent in the unyielding
+        armor of society.
+
+        Something more than my life''s worth.
+
+        Something
+        that the future generations would thank me of.
+
+        But alas, now I
+        know, I was a fool to tempt the powers of fate.
+
+        I''ve steered my
+        crew in danger''s way like the selfish being I swore to not become...
+
+        All
+        in the name of vanity.
+
+        Now I stand, a lone survivor on a barren
+        island.
+
+        None shall know my story.
+
+        None shall know my
+        life''s work.
+
+        None shall know my fate.
+
+        Everything was
+        for nothing...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986391344864574913, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 97.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3986391344864574913, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -77.1841
+      objectReference: {fileID: 0}
+    - target: {fileID: 4344191011380383548, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4471455426260397394, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
