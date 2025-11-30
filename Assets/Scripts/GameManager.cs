@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
     public bool sharkSpawnAllowed = true;
     public bool rockSpawnAllowed = true;
     public bool seaweedSpawnAllowed = true;
+    public int rockMaxInstances = 1;
+    public int seaweedMaxInstances = 1;
+    public int sharkMaxInstances = 1;
 
 
     private void Start()
@@ -163,7 +166,11 @@ public class GameManager : MonoBehaviour
                 rockInterval -= Time.deltaTime;
                 if (rockInterval <= 0)
                 {
+
+                for (int i = 0; i < Random.Range(1, rockMaxInstances); i++)
+                {
                     enemymanager.SpawnRock();
+                }
                     rockInterval = rockTimer;
                 }
             }
@@ -173,7 +180,10 @@ public class GameManager : MonoBehaviour
                 seaweedInterval -= Time.deltaTime;
                 if (seaweedInterval <= 0)
                 {
+                    for (int i = 0; i < Random.Range(1, seaweedMaxInstances); i++)
+                {
                     enemymanager.seaweed_spawn();
+                }
                     seaweedInterval = seaweedTimer;
                 }
             }
@@ -183,7 +193,10 @@ public class GameManager : MonoBehaviour
                 sharkInterval -= Time.deltaTime;
                 if (sharkInterval <= 0)
                 {
+                    for (int i = 0; i < Random.Range(1, sharkMaxInstances); i++)
+                {
                     enemymanager.shark_spawn();
+                }
                     sharkInterval = sharkTimer;
                 }
             }
