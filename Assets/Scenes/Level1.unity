@@ -2253,7 +2253,7 @@ MonoBehaviour:
   lvlLoader: {fileID: 2127633921}
   hudMenuController: {fileID: 2092441652}
   victoryCanvas: {fileID: 88613046}
-  leveltime: 10
+  leveltime: 20
   enemymanager: {fileID: 727719763}
   enemy_interval: 2
   soundmanager: {fileID: 727719764}

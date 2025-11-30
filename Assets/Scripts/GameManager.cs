@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     float time_interval;
     public SoundManager soundmanager;
     public GameObject islandPrefab;
+    private bool islandEndOfLevel = false;
 
 
     private void Start()
@@ -78,6 +79,14 @@ public class GameManager : MonoBehaviour
                 Debug.Log("You survived!");
                 WinGame();
             }
+            if (leveltime < 3.5f && !islandEndOfLevel)
+            {
+                Debug.Log("!!!!!!!!@@@@@@@@@@@@@@@!###################");
+                islandSpawn();
+                islandEndOfLevel = true;
+            }
+
+
         }
     }
 
@@ -133,7 +142,15 @@ public class GameManager : MonoBehaviour
     private void islandSpawn()
     {
 
-        Vector3 island_spawn = new Vector3(0f, 0f, -17f);
+        //Vector3 island_spawn = new Vector3(0f, 0f, -17f);
+        Vector3 island_spawn = new Vector3(1.2f, -1.5f, -15f);  // Start of level
+        Debug.Log("leveltime = "+ leveltime);
+        if (leveltime < 6)
+        {
+            island_spawn = new Vector3(1.2f, -1.5f, 10f);  // End of level
+        }
         Instantiate(islandPrefab, island_spawn, Quaternion.identity);
+
+        
     }
 }
