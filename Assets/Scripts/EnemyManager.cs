@@ -31,8 +31,7 @@ public class EnemyManager : MonoBehaviour
 
     public void shark_spawn()
     {
-        // ������ ������� 50/50 ��� �� �� �� �����
-        // spawn � ��������� �����(1) � ��������(-1)
+        // Πιθανότητα 50/50 για να βγει ο καρχαρίας, είτε από δεξιά, είτε από αριστερά
         int random_side = -13;
         if (Random.value > 0.5f)
         {

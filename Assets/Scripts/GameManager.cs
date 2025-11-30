@@ -22,6 +22,15 @@ public class GameManager : MonoBehaviour
     public SoundManager soundmanager;
     public GameObject islandPrefab;
     private bool islandEndOfLevel = false;
+    public float rockInterval = 2.0f;
+    public float seaweedInterval = 2.0f;
+    public float sharkInterval = 2.0f;
+    private float rockTimer;
+    private float seaweedTimer;
+    private float sharkTimer;
+    public bool sharkSpawnAllowed = true;
+    public bool rockSpawnAllowed = true;
+    public bool seaweedSpawnAllowed = true;
 
 
     private void Start()
@@ -52,6 +61,7 @@ public class GameManager : MonoBehaviour
         hudMenuController.BuildHearts(maxLives);
         hudMenuController.UpdateLives(currentLives, maxLives);
         timeIsRunning = true;
+        enemyTimersInit();
 
         islandSpawn();
     }
@@ -62,17 +72,17 @@ public class GameManager : MonoBehaviour
         {
             leveltime -= Time.deltaTime;
             time_interval += Time.deltaTime;
+
             // distance requires normalization because the sprite doesn't have the same distance or mesurment with the actual distance in gameplay
             float normalized = Mathf.Clamp01(trackDistance.GetDistance() / trackDistance.GetMaxDistance());
             hudMenuController.NavigationMovement(normalized);
 
-            if (time_interval >= enemy_interval)
-            {
-                time_interval = 0;
-                enemymanager.SpawnRock();   //Calls method to spawn an enemy
-                enemymanager.shark_spawn(); // Testing the shark enemy
-                enemymanager.seaweed_spawn();
-            }
+
+            // έλεγχος εχθρών
+            enemySpawnManagement();
+
+
+
             if (leveltime <= 0)
             {
                 timeIsRunning = false;
@@ -81,7 +91,6 @@ public class GameManager : MonoBehaviour
             }
             if (leveltime < 3.5f && !islandEndOfLevel)
             {
-                Debug.Log("!!!!!!!!@@@@@@@@@@@@@@@!###################");
                 islandSpawn();
                 islandEndOfLevel = true;
             }
@@ -139,10 +148,50 @@ public class GameManager : MonoBehaviour
     {
         return currentLives;
     }
+    private void enemyTimersInit()
+    {
+        rockTimer = rockInterval;
+        sharkTimer = sharkInterval;
+        seaweedTimer = seaweedInterval;
+    }
+
+
+    private void enemySpawnManagement()
+    {
+            if (rockSpawnAllowed)
+            {
+                rockInterval -= Time.deltaTime;
+                if (rockInterval <= 0)
+                {
+                    enemymanager.SpawnRock();
+                    rockInterval = rockTimer;
+                }
+            }
+
+            if (seaweedSpawnAllowed)
+            {
+                seaweedInterval -= Time.deltaTime;
+                if (seaweedInterval <= 0)
+                {
+                    enemymanager.seaweed_spawn();
+                    seaweedInterval = seaweedTimer;
+                }
+            }
+
+            if (sharkSpawnAllowed)
+            {
+                sharkInterval -= Time.deltaTime;
+                if (sharkInterval <= 0)
+                {
+                    enemymanager.shark_spawn();
+                    sharkInterval = sharkTimer;
+                }
+            }
+    }
+
     private void islandSpawn()
     {
-
-        //Vector3 island_spawn = new Vector3(0f, 0f, -17f);
+        // Οι παρακάτω συντεταγμένες (Vector3) είναι με το χέρι!
         Vector3 island_spawn = new Vector3(1.2f, -1.5f, -15f);  // Start of level
         Debug.Log("leveltime = "+ leveltime);
         if (leveltime < 6)
