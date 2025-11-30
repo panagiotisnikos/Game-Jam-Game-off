@@ -1021,7 +1021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5578989941584649215, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6575553667946541775, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1035,6 +1035,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameOverControllerWin, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 6673686961812295351, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 44.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7331076761148805193, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: lvlLoader
       value: 
@@ -1043,6 +1047,18 @@ PrefabInstance:
       propertyPath: soundmanager
       value: 
       objectReference: {fileID: 727719764}
+    - target: {fileID: 8029726228297285296, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029726228297285296, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029726228297285296, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 9207238803209626168, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
