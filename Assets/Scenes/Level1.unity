@@ -1057,6 +1057,30 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3927313888169428688, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_text
+      value: 'I lived my life trying to be found by fate and now my life will end
+        in solemnity.
+
+        A poetic end, fitting to my way of living.
+
+        I
+        am writing this letter to whoever finds it!
+
+
+        My name is dr. Robert
+        Johnson and as of this writing, I am stranded on an island somewhere in the
+        Pacific Ocean. I was travelling onboard "Lachesis" with my crew on an expedition
+        when a fierce storm hit our ship... All my life''s work swept away in a moment...
+
+        Last
+        thing I remember was hitting my head on a railing. I woke up on the shore
+        of this island with no other survivors to be found.
+
+
+        If you are
+        reading this, please send help.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3986391344864574913, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_SizeDelta.y
       value: 101.6
