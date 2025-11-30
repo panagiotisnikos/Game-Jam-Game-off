@@ -1007,9 +1007,33 @@ PrefabInstance:
       propertyPath: lvlLoader
       value: 
       objectReference: {fileID: 2127633921}
+    - target: {fileID: 5343759641348487159, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1097596401}
+    - target: {fileID: 5343759641348487159, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5343759641348487159, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverControllerWin, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5578989941584649215, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575553667946541775, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1097596401}
+    - target: {fileID: 6575553667946541775, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6575553667946541775, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverControllerWin, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7331076761148805193, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: lvlLoader
@@ -1035,10 +1059,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2234636392163419830, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5578989941584649215, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1097596401}
   m_SourcePrefab: {fileID: 100100000, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
 --- !u!224 &182697805 stripped
 RectTransform:
@@ -8308,6 +8336,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3074025264907042843, guid: 4e9f5b3ff3b6fa4aaa4678ac8bf8e429, type: 3}
   m_PrefabInstance: {fileID: 1066597278}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1097596400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5578989941584649215, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+  m_PrefabInstance: {fileID: 182697804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1097596401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097596400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a593b2e18a2a8428afa0daaea1ad82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  lvlLoader: {fileID: 2127633921}
+  soundmanager: {fileID: 727719764}
 --- !u!4 &1116877735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4540637730738921330, guid: ec618e744d72af7468e1be34035fea91, type: 3}
