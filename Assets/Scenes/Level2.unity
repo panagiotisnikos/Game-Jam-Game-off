@@ -1069,11 +1069,11 @@ PrefabInstance:
         Something
         that the future generations would thank me of.
 
-        But alas, now I
-        know, I was a fool to tempt the powers of fate.
+        But alas, now I know,
+        I was a fool to tempt the powers of fate.
 
-        I''ve steered my
-        crew in danger''s way like the selfish being I swore to not become...
+        I''ve steered my crew
+        in danger''s way like the selfish being I swore to not become...
 
         All
         in the name of vanity.
@@ -1083,13 +1083,12 @@ PrefabInstance:
 
         None shall know my story.
 
-        None shall know my
-        life''s work.
+        None shall know my life''s
+        work.
 
         None shall know my fate.
 
-        Everything was
-        for nothing...'
+        Everything was for nothing...'
       objectReference: {fileID: 0}
     - target: {fileID: 3986391344864574913, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2312,11 +2311,20 @@ MonoBehaviour:
   lvlLoader: {fileID: 2127633921}
   hudMenuController: {fileID: 2092441652}
   victoryCanvas: {fileID: 88613046}
-  leveltime: 20
+  leveltime: 65
   enemymanager: {fileID: 727719763}
   enemy_interval: 2
   soundmanager: {fileID: 727719764}
   islandPrefab: {fileID: 2914663151313903352, guid: a87596689f876e94c8cbf8a1a09a2546, type: 3}
+  rockInterval: 2
+  seaweedInterval: 4
+  sharkInterval: 4
+  sharkSpawnAllowed: 1
+  rockSpawnAllowed: 1
+  seaweedSpawnAllowed: 1
+  rockMaxInstances: 2
+  seaweedMaxInstances: 2
+  sharkMaxInstances: 1
 --- !u!4 &727719762
 Transform:
   m_ObjectHideFlags: 0

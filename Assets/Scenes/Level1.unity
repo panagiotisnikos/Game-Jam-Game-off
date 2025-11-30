@@ -2253,11 +2253,20 @@ MonoBehaviour:
   lvlLoader: {fileID: 2127633921}
   hudMenuController: {fileID: 2092441652}
   victoryCanvas: {fileID: 88613046}
-  leveltime: 20
+  leveltime: 69
   enemymanager: {fileID: 727719763}
   enemy_interval: 2
   soundmanager: {fileID: 727719764}
   islandPrefab: {fileID: 2914663151313903352, guid: a87596689f876e94c8cbf8a1a09a2546, type: 3}
+  rockInterval: 2
+  seaweedInterval: 6
+  sharkInterval: 15
+  sharkSpawnAllowed: 1
+  rockSpawnAllowed: 1
+  seaweedSpawnAllowed: 1
+  rockMaxInstances: 1
+  seaweedMaxInstances: 1
+  sharkMaxInstances: 1
 --- !u!4 &727719762
 Transform:
   m_ObjectHideFlags: 0
