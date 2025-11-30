@@ -1167,6 +1167,22 @@ PrefabInstance:
       propertyPath: soundmanager
       value: 
       objectReference: {fileID: 727719764}
+    - target: {fileID: 9207238803209626168, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 727719764}
+    - target: {fileID: 9207238803209626168, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ButtonPressed1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207238803209626168, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SoundManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207238803209626168, guid: e9f8d042dba2e1b4b8e35418f1d8fc6d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2380,6 +2396,8 @@ MonoBehaviour:
   letter_sound: {fileID: 8300000, guid: bc73706adbd51104ab3ca74a7f70015d, type: 3}
   win_sound: {fileID: 8300000, guid: 7bc6d7851ccb3b54bacb1356b4265379, type: 3}
   seaweed_audiosource_prefab: {fileID: 80816706252633108, guid: b767f940a696ea041b3318280842c0f1, type: 3}
+  Button1: {fileID: 8300000, guid: 8769b51391a697d46871e9f53fcc4fa6, type: 3}
+  Button2: {fileID: 8300000, guid: 136163fc43978f7498e0ef220b81c3c8, type: 3}
 --- !u!114 &727719765
 MonoBehaviour:
   m_ObjectHideFlags: 0

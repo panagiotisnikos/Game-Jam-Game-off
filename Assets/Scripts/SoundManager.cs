@@ -15,6 +15,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip win_sound;
     public GameObject seaweed_audiosource_prefab;
 
+    public AudioClip Button1;
+    
+    public AudioClip Button2;
+
     private bool inside_seaweed = false;
     private GameObject temp;
 
@@ -89,5 +93,16 @@ public class SoundManager : MonoBehaviour
         public void LetterMusic()
     {
         music2.Play();
+    }
+
+
+     public void ButtonPressed1()
+    {
+        ambience.PlayOneShot(Button1,0.7f);
+    }
+
+     public void ButtonPressed2()
+    {
+        ambience.PlayOneShot(Button2,0.7f);
     }
 }
